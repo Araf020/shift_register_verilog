@@ -48,21 +48,84 @@ module bidir_shift_reg_tb;
     // Wait for a few clock cycles
     #10;
 
-    // Testcase 1: Bidirectional shift (dir = 0)
-    $display("Testcase 1: Bidirectional Shift");
+    // Testcase 1: Bidirectional Right shift (dir = 0)
+    $display("Testcase 1: Bidirectional Right Shift");
     #5;
     d = 1;
     #10;
+    d = 1;
+    #10;
+    d = 1;
+    #10;
+    d = 0;
+    #10;
     d = 0;
     #10;
     d = 1;
     #10;
     d = 0;
     #10;
-
-    // Testcase 2: Circular shift (dir = 1, circular = 1)
-    $display("Testcase 2: Circular Shift");
+    d = 1;
+    #10;  
+    d = 0;
+    #10;
+    d = 0;
+    #10;
+    d = 0;
+    #10;
+    d = 1;
+    #10;  
+    d = 0;
+    #10;
+    d = 0;
+    #10;
+    d = 1;
+    #10;
+    d = 1;
+    #10;
+    
+    // Testcase 2: Bidirectional Left shift (dir = 0)
+    $display("Testcase 2: Bidirectional Left Shift");
     dir = 1;
+    
+    #5;
+    d = 1;
+    #10;
+    d = 1;
+    #10;
+    d = 1;
+    #10;
+    d = 0;
+    #10;
+    d = 0;
+    #10;
+    d = 1;
+    #10;
+    d = 0;
+    #10;
+    d = 1;
+    #10;  
+    d = 0;
+    #10;
+    d = 0;
+    #10;
+    d = 0;
+    #10;
+    d = 1;
+    #10;  
+    d = 0;
+    #10;
+    d = 0;
+    #10;
+    d = 1;
+    #10;
+    d = 1;
+    #10;
+    
+
+    // Testcase 2: Circular shift (dir = 0, circular = 1)
+    $display("Testcase 2: Circular Left Shift");
+    dir = 0;
     circular = 1;
     #10;
     d = 1;
@@ -71,7 +134,15 @@ module bidir_shift_reg_tb;
     #10;
     d = 1;
     #10;
+    d = 1;
+    #10;
+    d = 1;
+    #10;
     d = 0;
+    #10;
+    d = 1;
+    #10;
+    d = 1;
     #10;
 
     // Finish simulation

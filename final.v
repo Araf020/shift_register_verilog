@@ -17,6 +17,7 @@ module bidir_shift_reg #(parameter MSB=8) (
     end
     else begin
       if (en) begin
+        // circular shift
         if (circular) begin
           carry_out <= out[0];
           if (dir)
@@ -25,11 +26,16 @@ module bidir_shift_reg #(parameter MSB=8) (
             out <= {out[MSB-2:0], out[MSB-1]};
         end 
         else begin
-          carry_out <= carry_in;
-          if (dir)
+          // left shift
+          if (dir) begin              
+            carry_out <= out[MSB-1];
             out <= {out[MSB-2:0], d};
-          else
+          end
+          // right shift
+          else begin                  
+            carry_out <= out[0];
             out <= {d, out[MSB-1:1]};
+          end
         end
       end 
       else begin
