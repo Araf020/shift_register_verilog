@@ -35,3 +35,6 @@ Now run this from the terminal
 this will open GUI of gtwave.
 
 Now  open the .vcd file using gtkwave GUI
+
+#Syntehsize using Qflow
+
