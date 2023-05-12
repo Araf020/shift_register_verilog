@@ -26,7 +26,7 @@ this will generate a .vcd file.
 in that case you need gtkwave.
 to install gtkwave run
 
-    sudo apt install gtk
+    sudo apt install gtkwave
     
 Now run this from the terminal
 
