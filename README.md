@@ -5,6 +5,7 @@ You should install iverilog. To install follow this link
     https://www.geeksforgeeks.org/how-to-install-verilog-hdl-on-linux/
 ###    
 run these commands in the project directory after clonning
+   
     iverilog final.v final_tb.v
     vvp a.out
 
