@@ -31,5 +31,6 @@ to install gtkwave run
 Now run this from the terminal
 
     gtkwave
-    
-and open the .vcd file.
+this will open GUI of gtwave.
+
+Now  open the .vcd file using gtkwave GUI
