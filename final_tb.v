@@ -84,7 +84,7 @@ module bidir_shift_reg_tb;
     d = 1;
     #10;
     
-    // Testcase 2: Bidirectional Left shift (dir = 0)
+    // Testcase 2: Bidirectional Left shift (dir = 1)
     $display("Testcase 2: Bidirectional Left Shift");
     dir = 1;
     
@@ -123,9 +123,31 @@ module bidir_shift_reg_tb;
     #10;
     
 
-    // Testcase 2: Circular shift (dir = 0, circular = 1)
-    $display("Testcase 2: Circular Left Shift");
+    // Testcase 3: Circular Right shift (dir = 0, circular = 1)
+    $display("Testcase 3: Circular Right Shift");
     dir = 0;
+    circular = 1;
+    #10;
+    d = 1;
+    #10;
+    d = 0;
+    #10;
+    d = 1;
+    #10;
+    d = 1;
+    #10;
+    d = 1;
+    #10;
+    d = 0;
+    #10;
+    d = 1;
+    #10;
+    d = 1;
+    #10;
+
+    // Testcase 4: Circular shift (dir = 1, circular = 1)
+    $display("Testcase 4: Circular Left Shift");
+    dir = 1;
     circular = 1;
     #10;
     d = 1;
@@ -151,7 +173,7 @@ module bidir_shift_reg_tb;
 
   // Display output and carry_out on each positive clock edge
   always @(posedge clk) begin
-    $display("dir = %b, circular = %b, d = %b, out = %b, carry_out = %b", dir, circular, d, out, carry_out);
+    $display("dir = %b, circular = %b, d = %b, out = %b", dir, circular, d, out);
   end
 
 endmodule
